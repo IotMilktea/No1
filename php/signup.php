@@ -26,6 +26,7 @@ var_dump($name,$email,$password);
 $q="INSERT INTO user(name,email,password) VALUES ('$name','$email','$password')";//向資料庫插入表單傳來的值的sql
 $reslut=mysqli_query($con,$q);//執行sql
 var_dump($result);
+
 if (!$reslut){
 die('Error: ' . mysqli_error($con));//如果sql執行失敗輸出錯誤
 }else{
